@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+ 
+}
+.monospace {
+  font-family: monospace;
+}
+body {
+
+  background-image: url(../img/6.jpg);
+
+  
+}
+
+/* ------------ header ---------*/
+a {
+  text-decoration: none;
+}
+nav {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(250, 158, 158, 0);
+  width: 100%;
+  margin: 15px 0px 30px 0px;
+}
+
+.button {
+  padding: 6px;
+  margin: 10px;
+  border: 2px transparent black;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 50px;
+  background-image: repeating-linear-gradient(
+    rgba(108, 10, 25, 0.989),
+    rgba(252, 252, 252, 0.652)
+  );
+  color: white;
+}
+
+.button:hover:hover {
+  padding: 25px; ;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  -o-transition: all 1.4s ease-in-out;
+  -webkit-transition: all 1.4s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+/* -------------------- Main Page ------------ */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.face-code {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  background: url(../img/artificial-intelligence-2167835.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(161, 27, 27), 0 0 50px #ffffff;
+  animation: animateFace 100s linear infinite;
+}
+@keyframes animateFace {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -3702px 0;
+  }
+}
+
+.circle {
+  transform-style: preserve-3d;
+  animation: animateText 15s linear infinite;
+}
+
+.circle span {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  background-image: repeating-linear-gradient(
+    rgba(117, 0, 251, 0.989),
+    rgb(252, 252, 252)
+  );
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  padding: 5px 11px;
+  transform: rotateY(calc(var(--i) * calc(360deg / 37))) translateZ(200px);
+  border-top: 4px solid #ff000055;
+  border-bottom: 4px solid #35146f;
+}
+
+.circle span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    rgba(108, 10, 25, 0.989),
+    rgb(252, 252, 252)
+  );
+  transform: translateZ(-5px);
+}
+@keyframes animateText {
+  0% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg)
+      translateY(-30px);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
+      translateY(-30px);
+  }
+}
+/* -------------------- Main Page Media query ------------ */
+@media screen and (max-width:576px) {
+  .face-code {
+    top: 40%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .circle span {
+    bottom: 0px;
+    left: 0;
+    font-size: 2.3em;
+    transform: rotateY(calc(var(--i) * calc(360deg / 37))) translateZ(160px);
+  } 
+}
+
+
+
+/* ------------- footer-------------- */
+footer {
+  padding-top: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.footer {
+  font-size: 1.3em;
+  margin: 0px 40px;
+}
+.footer-box {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.footer-box1 {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.footer1 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  margin: 0px 40px;
+}
+.fa-facebook {
+  margin: 0 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: blue;
+  font-size: 40px;
+}
+.fa-instagram {
+  border-radius: 25%;
+  font-size: 40px;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.a-2 {
+  color: black;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
